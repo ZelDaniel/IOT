@@ -11,7 +11,7 @@ import { formatDate } from 'src/shared/functions';
      })
      export class TempChartComponent implements OnChanges {
 
-     @ViewChild ('chart', {static: false}) chart : ElementRef ;
+     @ViewChild ('chart', { static: true}) chart : ElementRef ;
      @Input () measurements ;
 
     ngOnChanges ( changes : SimpleChanges ): void {
@@ -35,7 +35,7 @@ import { formatDate } from 'src/shared/functions';
      const time = new Date (( item.timestamp + 2 * 60) *1000) ;
 
      if ( time > new Date ( yesterday )) {
-     data [0]. x. push ( formatDate ( item.timestamp ));
+     data [0]. x. push ( formatDate ( item.timestamp));
      data [0]. y. push ( item.temperature );
      }
      });

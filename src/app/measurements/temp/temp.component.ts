@@ -10,8 +10,8 @@ import { DataService } from '../data.service';
 export class TempComponent {
 
 measurements;
-constructor ( private dataService : DataService) { // Dependency Injection
-  this.dataService.getData('weather-station').valueChanges ().subscribe ( data => {
+constructor( private dataService: DataService) { // Dependency Injection
+this.dataService.getData('temperature').valueChanges ().subscribe ( data => {
   this.measurements = data ;
   });
 }

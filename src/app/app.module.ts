@@ -10,14 +10,12 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { TempComponent } from './measurements/temp/temp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    TempComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +24,7 @@ import { TempComponent } from './measurements/temp/temp.component';
     AngularFireAuthModule,
     MeasurementsModule ,
     NgxLoadingModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

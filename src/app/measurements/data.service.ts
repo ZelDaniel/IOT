@@ -4,6 +4,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
   constructor( private db: AngularFireDatabase ) {
   }
